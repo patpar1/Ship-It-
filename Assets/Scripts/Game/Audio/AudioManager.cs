@@ -26,9 +26,9 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float forwardInput = Input.GetAxis("Vertical");
+        float forwardInput = Mathf.Abs(Input.GetAxis("Vertical"));
 
-        if (forwardInput > 0 && CurrentPitch < maxPitch)
+        if (!GameManager.hasWon && !GameManager.hasLost && forwardInput > 0 && CurrentPitch < maxPitch)
         {
             CurrentPitch += forwardInput * pitchSpeed;
         }
@@ -62,5 +62,23 @@ public class AudioManager : MonoBehaviour
     public void PlayLoseAudio()
     {
         loseAudio.Play();
+    }
+
+    public void PauseAllAudioSources()
+    {
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        foreach (AudioSource a in audioSources)
+        {
+            a.Pause();
+        }
+    }
+
+    public void PlayAllAudioSources()
+    {
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        foreach (AudioSource a in audioSources)
+        {
+            a.UnPause();
+        }
     }
 }

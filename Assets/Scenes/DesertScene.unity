@@ -2799,6 +2799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1210390600}
+  gameUI: {fileID: 1537532076}
+  audioManager: {fileID: 6608791032050952287}
 --- !u!114 &1264385579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3336,7 +3338,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.3383344, y: 0.3521098, z: -0.13825972, w: 0.8616454}
+  m_LocalRotation: {x: 0.3295521, y: 0.40252256, z: -0.15805483, w: 0.8392793}
   m_LocalPosition: {x: -5.0000005, y: 5.54, z: -95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3764,7 +3766,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863520174}
-  m_LocalRotation: {x: 0.3383344, y: 0.3521098, z: -0.13825972, w: 0.8616454}
+  m_LocalRotation: {x: 0.3295521, y: 0.40252256, z: -0.15805483, w: 0.8392793}
   m_LocalPosition: {x: -5.0000005, y: 5.54, z: -95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

@@ -28,11 +28,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        m_HorizontalInput = Input.GetAxis("Horizontal");
-        m_VerticalInput = Input.GetAxis("Vertical");
+        if (!GameManager.hasWon && !GameManager.hasLost)
+        {
+            m_HorizontalInput = Input.GetAxis("Horizontal");
+            m_VerticalInput = Input.GetAxis("Vertical");
 
-        m_PlayerRb.AddRelativeForce(Vector3.right * movementSpeed * m_VerticalInput, ForceMode.Force);
-        m_PlayerRb.AddRelativeTorque(Vector3.up * rotationSpeed * m_HorizontalInput, ForceMode.Force);
+            m_PlayerRb.AddRelativeForce(Vector3.right * movementSpeed * m_VerticalInput, ForceMode.Force);
+            m_PlayerRb.AddRelativeTorque(Vector3.up * rotationSpeed * m_HorizontalInput, ForceMode.Force);
+        }
 
         // Add drag
         Vector3 localNormalVelocity = transform.InverseTransformVector(m_PlayerRb.velocity).normalized;
